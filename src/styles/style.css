@@ -1,0 +1,83 @@
+.ham_menu {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+.navbar {
+  height: 50px;
+}
+.oval {
+  width: 20px;
+  height: 20px;
+  background: #00eaff;
+  background-blend-mode: normal;
+  border-radius: 41% 59% 81% 19% / 74% 78% 22% 26%;
+  animation: spin 1s infinite ease-in-out;
+}
+.project {
+  display: grid;
+  grid-template-columns: 20% auto;
+  gap: 20px;
+}
+.profile {
+  height: 200px;
+  transform: perspective(70deg);
+}
+.profile:hover {
+  transition: 0.5s;
+}
+.custom-lottie {
+  width: 200px;
+  height: 200px;
+}
+.cat {
+  height: 100px;
+}
+
+@media (max-width: 770px) {
+  .project {
+    display: flex;
+    width: 100%;
+  }
+  .menu {
+    display: none;
+  }
+  .ham_menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    right: 0;
+  }
+  .content {
+    width: 100%;
+  }
+  .hamburger {
+    display: block;
+  }
+  .proinfo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 625px) {
+  .info {
+    flex-direction: column;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+  .proinfo {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
