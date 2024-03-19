@@ -1,5 +1,21 @@
+.navbar {
+  transition: all 0.6s;
+}
+.project {
+  transition: all 0.6s;
+}
+.content {
+  transition: all 0.6s;
+}
+.menu {
+  transition: all 0.6s;
+}
 .ham_menu {
   display: none;
+  transition: all 0.6s;
+}
+.hamburger > div > svg {
+  transition: all 0.6s;
 }
 .hamburger {
   display: none;

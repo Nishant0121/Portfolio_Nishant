@@ -21,7 +21,7 @@ export const Projects = () => {
     >
       <div
         className={`menu h-svh mx-3  p-3  rounded-lg ${
-          isDarkMode ? "bg-secondary text-dark" : "bg-primary"
+          isDarkMode ? "bg-secondary text-light" : "bg-primary text-dark"
         }`}
       >
         <ul className="list-none  text-white">
@@ -64,10 +64,16 @@ export const Projects = () => {
       </div>
       <div
         className={`content rounded-lg ${
-          isDarkMode ? "bg-secondary text-dark" : "bg-primary"
+          isDarkMode ? "bg-secondary text-light" : "bg-primary text-dark"
         } `}
       >
-        <div className="info flex justify-around items-center p-3 m-3 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <div
+          className={`info flex justify-around items-center bg-gradient-to-r p-3 m-3 rounded-lg ${
+            isDarkMode
+              ? "bg-gradient-to-r from-blue to-light_blue"
+              : " bg-gradient-to-r from-light_blue to-blue"
+          }`}
+        >
           <Lottie className="profile z-0" animationData={profile} loop={true} />
           <div className="name flex flex-col justify-centre">
             <h1 className="text-xl font-semibold">Nishant Patil</h1>
