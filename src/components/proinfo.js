@@ -20,8 +20,10 @@ export default function Project() {
             </p>
 
             <a
-              href="/"
+              href="https://nishant0121.github.io/Travel_Go/"
               className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+              target="_blank"
+              rel="noreferrer"
             >
               Find out more
               <span
@@ -46,10 +48,12 @@ export default function Project() {
             </p>
 
             <a
-              href="/"
+              href="https://atlas-os.vercel.app/"
               className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+              target="_blank"
+              rel="noreferrer"
             >
-              Find out more
+              Check it out
               <span
                 aria-hidden="true"
                 className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
