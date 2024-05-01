@@ -1,13 +1,19 @@
 import React from "react";
 import travelgo from "../images/travelgo.jpeg";
 import atlas from "../images/atlas.jpeg";
+import { easeInOut, motion } from "framer-motion";
 
 export default function Project() {
   return (
     <div>
       <h1 className=" text-violet-900 text-center text-xl">Project</h1>
       <div className="proinfo grid grid-cols-3 gap-2">
-        <article className="overflow-hidden rounded-lg border m-3 border-gray-100 bg-white shadow-sm">
+        <motion.div
+          className="overflow-hidden rounded-lg border m-3 border-gray-100 bg-white shadow-sm"
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <img alt="" src={travelgo} className="h-56 w-full object-cover" />
 
           <div className="p-4 sm:p-6">
@@ -34,8 +40,13 @@ export default function Project() {
               </span>
             </a>
           </div>
-        </article>
-        <article className="overflow-hidden m-3 rounded-lg border border-gray-100 bg-white shadow-sm">
+        </motion.div>
+        <motion.article
+          className="overflow-hidden m-3 rounded-lg border border-gray-100 bg-white shadow-sm"
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.6, ease: easeInOut }}
+        >
           <img alt="" src={atlas} className="h-56 w-full object-cover" />
 
           <div className="p-4 sm:p-6">
@@ -62,7 +73,7 @@ export default function Project() {
               </span>
             </a>
           </div>
-        </article>
+        </motion.article>
       </div>
     </div>
   );

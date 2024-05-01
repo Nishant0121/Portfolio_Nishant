@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
-
+import { easeInOut, easeOut, motion, spring } from "framer-motion";
 import { FaHome } from "react-icons/fa";
 import { IoVideocamOutline } from "react-icons/io5";
-import { FaPhone } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { VscThreeBars } from "react-icons/vsc";
 import { ModeContext } from "../contex";
@@ -54,23 +53,47 @@ export const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div
+        <motion.div
           className={`ham_menu h-svh  p-3 z-50 rounded-lg ${
             isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
           }`}
+          transition={{ type: spring, ease: easeOut, duration: 0.2 }}
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
         >
           <ul className="list-none  text-white">
             <li className="m-2 p-2 flex justify-start items-center text-lg">
-              <FaHome />
-              <h1 className="ml-2">Home</h1>
+              <Link
+                to={"/"}
+                className="flex justify-start items-center"
+                onClick={toggleMenu}
+              >
+                <FaHome />
+                <h1 className="ml-2">Home</h1>
+              </Link>
             </li>
             <li className="m-2 p-2 flex justify-start items-center text-lg">
-              <FaPhone />
-              <h1 className="ml-2">Contact</h1>
-            </li>
-            <li className="m-2 p-2 flex justify-start items-center text-lg">
-              <IoVideocamOutline />
-              <h1 className="ml-2">Videos</h1>
+              <Link
+                to="/contact"
+                className="flex justify-start items-center"
+                onClick={toggleMenu}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                  />
+                </svg>
+                <h1 className="ml-2">Contact</h1>
+              </Link>
             </li>
             <li className="m-2 p-2 flex justify-start items-center text-lg">
               <label class="inline-flex items-center mb-5 cursor-pointer border rounded-full">
@@ -83,7 +106,7 @@ export const Navbar = () => {
               </label>
             </li>
           </ul>
-        </div>
+        </motion.div>
       )}
     </nav>
   );
