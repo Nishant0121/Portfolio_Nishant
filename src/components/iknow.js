@@ -40,7 +40,7 @@ export default function IKnow() {
             whileInView={{ x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className=" text-center font-bold text-lg">Databades</p>
+            <p className=" text-center font-bold text-lg">Database</p>
             <div className="flex flex-wrap mt-2">
               <div className="border rounded-lg  px-2 m-0.5">MySQL</div>
               <div className="border rounded-lg  px-2 m-0.5">MogoDB</div>
