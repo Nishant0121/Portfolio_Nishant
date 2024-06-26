@@ -1,6 +1,7 @@
 import React from "react";
 import travelgo from "../images/travelgo.jpeg";
 import atlas from "../images/atlas.jpeg";
+import thegallery from "../images/The-Gallery.jpeg";
 import { easeInOut, motion } from "framer-motion";
 
 export default function Project() {
@@ -26,7 +27,7 @@ export default function Project() {
             </p>
 
             <a
-              href="https://nishant0121.github.io/Travel_Go/"
+              href="https://travel-g0.vercel.app/"
               className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
               target="_blank"
               rel="noreferrer"
@@ -60,6 +61,39 @@ export default function Project() {
 
             <a
               href="https://atlas-os.vercel.app/"
+              className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Check it out
+              <span
+                aria-hidden="true"
+                className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+              >
+                &rarr;
+              </span>
+            </a>
+          </div>
+        </motion.article>
+        <motion.article
+          className="overflow-hidden m-3 rounded-lg border border-gray-100 bg-white shadow-sm"
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.6, ease: easeInOut }}
+        >
+          <img alt="" src={thegallery} className="h-56 w-full object-cover" />
+
+          <div className="p-4 sm:p-6">
+            <a href="/">
+              <h3 className="text-lg font-medium text-gray-900">The Gallery</h3>
+            </a>
+
+            <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+              It is a Website that can store the images for you.
+            </p>
+
+            <a
+              href="https://the-gallery-frontend.vercel.app/"
               className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
               target="_blank"
               rel="noreferrer"
