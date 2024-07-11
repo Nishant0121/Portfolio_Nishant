@@ -97,3 +97,24 @@
     transform: rotate(360deg);
   }
 }
+
+/* WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0841fe00;
+  border-radius: 10px;
+  border: 3px solid #45daff00; /* Space around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #52b4ff00;
+}
