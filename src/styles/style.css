@@ -9,7 +9,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 7px;
+  height: 5px;
+  border-radius: 15px;
   transform-origin: 0%;
 }
 .project {
@@ -62,67 +63,26 @@
   height: 100px;
 }
 
-@media (max-width: 770px) {
-  .project {
-    display: flex;
-    width: 100%;
-  }
-  .menu {
-    display: none;
-  }
-  .ham_menu {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 50px;
-    right: 0;
-  }
-  .content {
-    width: 100%;
-  }
-  .hamburger {
-    display: block;
-  }
-  @media (max-width: 625px) {
-    .info {
-      flex-direction: column;
-    }
-    .project {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3c21b300;
+  scroll-behavior: smooth;
+}
 
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+/* WebKit browsers */
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
 
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #3c21b300;
-    scroll-behavior: smooth;
-  }
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
 
-  /* WebKit browsers */
-  *::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #491eff;
-    border-radius: 10px;
-    border: 3px solid transparent;
-    background-clip: content-box;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #491eff;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
 }

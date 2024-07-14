@@ -5,19 +5,24 @@ import thegallery from "../images/The-Gallery.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import { FaReact } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa6";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+
 export default function Project() {
   return (
     <div>
       <h1 className="text-white text-start text-xl font-bold">Projects</h1>
       <div className="proinfo grid grid-cols-1 mt-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
         <motion.div
-          className="card bg-base-100 "
+          className="card bg-base-100"
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
           whileHover={{
             scale: 1.05,
             zIndex: 25,
-            boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
           }}
           transition={{
             duration: 0.3,
@@ -29,11 +34,11 @@ export default function Project() {
             <figure className="">
               <img
                 src={travelgo}
-                alt="Shoes"
+                alt="Travel Go"
                 className="rounded-xl h-36 w-full object-cover"
               />
             </figure>
-            <div className=" items-center text-center">
+            <div className="items-center text-center">
               <h2 className="text-xl font-bold text-white text-start m-1">
                 Travel Go
               </h2>
@@ -45,7 +50,7 @@ export default function Project() {
                 >
                   Visit
                 </Link>
-                <div className="dropdown dropdown-hover">
+                <div className="dropdown dropdown-hover relative">
                   <div
                     tabIndex={0}
                     role="button"
@@ -53,17 +58,18 @@ export default function Project() {
                   >
                     Details
                   </div>
-                  <ul
+                  <div
                     tabIndex={0}
-                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue"
+                    className="dropdown-content  menu bg-base-100 rounded-box z-[1] w-fit p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue absolute"
                   >
-                    <li>
-                      <h1>Item 1</h1>
-                    </li>
-                    <li>
-                      <h1>Item 2</h1>
-                    </li>
-                  </ul>
+                    <div className=" flex items-center justify-center">
+                      <FaReact className=" text-blue h-10 mx-2 text-3xl" />
+                      <SiMongodb className=" text-green-700 h-10 mx-2 text-3xl" />
+                      <FaNodeJs className=" text-green-400 h-10 mx-2 text-3xl" />
+                      <SiExpress className=" text-sky-500 font-bold h-10 mx-2 text-3xl" />
+                      <RiTailwindCssFill className=" text-sky-500 font-bold h-10 mx-2 text-3xl" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -76,7 +82,6 @@ export default function Project() {
           whileHover={{
             scale: 1.05,
             zIndex: 25,
-            boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
           }}
           transition={{
             duration: 0.3,
@@ -88,11 +93,11 @@ export default function Project() {
             <figure className="">
               <img
                 src={atlas}
-                alt="Shoes"
+                alt="Atlas OS"
                 className="rounded-xl h-36 w-full object-cover"
               />
             </figure>
-            <div className=" items-center text-center">
+            <div className="items-center text-center">
               <h2 className="text-xl font-bold text-white text-start m-1">
                 Atlas OS
               </h2>
@@ -104,7 +109,7 @@ export default function Project() {
                 >
                   Visit
                 </Link>
-                <div className="dropdown dropdown-hover">
+                <div className="dropdown dropdown-hover relative">
                   <div
                     tabIndex={0}
                     role="button"
@@ -112,17 +117,16 @@ export default function Project() {
                   >
                     Details
                   </div>
-                  <ul
+                  <div
                     tabIndex={0}
-                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue"
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-fit p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue absolute"
                   >
-                    <li>
-                      <h1>Item 1</h1>
-                    </li>
-                    <li>
-                      <h1>Item 2</h1>
-                    </li>
-                  </ul>
+                    <div className=" flex items-center justify-center">
+                      <FaReact className=" text-blue h-10 mx-2 text-3xl" />
+                      <FaNodeJs className=" text-green-400 h-10 mx-2 text-3xl" />
+                      <RiTailwindCssFill className=" text-sky-500 font-bold h-10 mx-2 text-3xl" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -135,7 +139,6 @@ export default function Project() {
           whileHover={{
             scale: 1.05,
             zIndex: 25,
-            boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
           }}
           transition={{
             duration: 0.3,
@@ -147,11 +150,11 @@ export default function Project() {
             <figure className="">
               <img
                 src={thegallery}
-                alt="Shoes"
+                alt="The Gallery"
                 className="rounded-xl h-36 w-full object-cover"
               />
             </figure>
-            <div className=" items-center text-center">
+            <div className="items-center text-center">
               <h2 className="text-xl font-bold text-white text-start m-1">
                 The Gallery
               </h2>
@@ -163,7 +166,7 @@ export default function Project() {
                 >
                   Visit
                 </Link>
-                <div className="dropdown dropdown-hover">
+                <div className="dropdown dropdown-hover relative">
                   <div
                     tabIndex={0}
                     role="button"
@@ -171,17 +174,18 @@ export default function Project() {
                   >
                     Details
                   </div>
-                  <ul
+                  <div
                     tabIndex={0}
-                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue"
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-fit p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue absolute"
                   >
-                    <li>
-                      <h1>Item 1</h1>
-                    </li>
-                    <li>
-                      <h1>Item 2</h1>
-                    </li>
-                  </ul>
+                    <div className=" flex items-center justify-center">
+                      <FaReact className=" text-blue h-10 mx-2 text-3xl" />
+                      <SiMongodb className=" text-green-700 h-10 mx-2 text-3xl" />
+                      <FaNodeJs className=" text-green-400 h-10 mx-2 text-3xl" />
+                      <SiExpress className=" text-sky-500 font-bold h-10 mx-2 text-3xl" />
+                      <RiTailwindCssFill className=" text-sky-500 font-bold h-10 mx-2 text-3xl" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
