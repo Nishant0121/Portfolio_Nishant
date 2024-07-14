@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <>
       <motion.div
-        className="progress-bar bg-blue "
+        className="progress-bar bg-blue z-50"
         style={{ scaleX: scrollYProgress }}
       />{" "}
       <Navbar />

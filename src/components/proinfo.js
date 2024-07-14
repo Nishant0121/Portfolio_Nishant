@@ -16,7 +16,7 @@ export default function Project() {
           whileInView={{ x: 0 }}
           whileHover={{
             scale: 1.05,
-            zIndex: 100,
+            zIndex: 25,
             boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
           }}
           transition={{
@@ -75,7 +75,7 @@ export default function Project() {
           whileInView={{ x: 0 }}
           whileHover={{
             scale: 1.05,
-            zIndex: 100,
+            zIndex: 25,
             boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
           }}
           transition={{
@@ -134,7 +134,7 @@ export default function Project() {
           whileInView={{ x: 0 }}
           whileHover={{
             scale: 1.05,
-            zIndex: 100,
+            zIndex: 25,
             boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
           }}
           transition={{
