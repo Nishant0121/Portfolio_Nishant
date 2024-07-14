@@ -1,11 +1,17 @@
-import { Projects } from "../components/project";
+import Navbar from "../components/navbar";
+import Content from "./content";
+import { motion, useScroll } from "framer-motion";
 
-import { Navbar } from "../components/navbar";
 export const Home = () => {
+  const { scrollYProgress } = useScroll();
   return (
-    <div className="font-mono background">
+    <>
+      <motion.div
+        className="progress-bar bg-blue "
+        style={{ scaleX: scrollYProgress }}
+      />{" "}
       <Navbar />
-      <Projects />
-    </div>
+      <Content />
+    </>
   );
 };

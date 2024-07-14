@@ -1,16 +1,24 @@
+/* eslint-disable import/no-anonymous-default-export */
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+
+const colors = require("tailwindcss/colors");
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
-    colors: {
-      dark: "#222831",
-      light: "#EEEEEE",
-      primary: "#76ABAE",
-      secondary: "#31363F",
-      blue: "#7B66FF",
-      light_blue: "#00A9FF",
+    screens: {
+      sm: "380px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
+    extend: {
+      colors: {
+        blue: "#30FFFF",
+        black: colors.black,
+      },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line no-undef
+  plugins: [require("daisyui")],
 };

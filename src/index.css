@@ -10,6 +10,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  scrollbar-width: none;
+  scrollbar-color: #491eff00;
+  scroll-behavior: smooth;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

@@ -2,112 +2,191 @@ import React from "react";
 import travelgo from "../images/travelgo.jpeg";
 import atlas from "../images/atlas.jpeg";
 import thegallery from "../images/The-Gallery.jpeg";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Project() {
   return (
     <div>
-      <h1 className=" text-violet-900 text-center text-xl">Project</h1>
-      <div className="proinfo grid grid-cols-3 gap-2">
+      <h1 className="text-white text-start text-xl font-bold">Projects</h1>
+      <div className="proinfo grid grid-cols-1 mt-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
         <motion.div
-          className="overflow-hidden rounded-lg border m-3 border-gray-100 bg-white shadow-sm"
+          className="card bg-base-100 "
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
-          transition={{ duration: 0.6 }}
+          whileHover={{
+            scale: 1.05,
+            zIndex: 100,
+            boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
+          }}
+          transition={{
+            duration: 0.3,
+            stiffness: 400,
+            damping: 10,
+          }}
         >
-          <img alt="" src={travelgo} className="h-56 w-full object-cover" />
-
-          <div className="p-4 sm:p-6">
-            <a href="/">
-              <h3 className="text-lg font-medium text-gray-900">Travel Go</h3>
-            </a>
-
-            <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              Its a Website for travel booking
-            </p>
-
-            <a
-              href="https://travel-g0.vercel.app/"
-              className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Find out more
-              <span
-                aria-hidden="true"
-                className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-              >
-                &rarr;
-              </span>
-            </a>
-          </div>
+          <>
+            <figure className="">
+              <img
+                src={travelgo}
+                alt="Shoes"
+                className="rounded-xl h-36 w-full object-cover"
+              />
+            </figure>
+            <div className=" items-center text-center">
+              <h2 className="text-xl font-bold text-white text-start m-1">
+                Travel Go
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="grid grid-cols-2">
+                <Link
+                  to={"https://travel-g0.vercel.app/"}
+                  className="bg-blue rounded-xl px-2 text-black py-1 m-1"
+                >
+                  Visit
+                </Link>
+                <div className="dropdown dropdown-hover">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="bg-blue rounded-xl px-2 text-black py-1 m-1"
+                  >
+                    Details
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue"
+                  >
+                    <li>
+                      <h1>Item 1</h1>
+                    </li>
+                    <li>
+                      <h1>Item 2</h1>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </>
         </motion.div>
-        <motion.article
-          className="overflow-hidden m-3 rounded-lg border border-gray-100 bg-white shadow-sm"
+        <motion.div
+          className="card bg-base-100 shadow-xl"
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
-          transition={{ duration: 0.6, ease: easeInOut }}
+          whileHover={{
+            scale: 1.05,
+            zIndex: 100,
+            boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
+          }}
+          transition={{
+            duration: 0.3,
+            stiffness: 400,
+            damping: 10,
+          }}
         >
-          <img alt="" src={atlas} className="h-56 w-full object-cover" />
-
-          <div className="p-4 sm:p-6">
-            <a href="/">
-              <h3 className="text-lg font-medium text-gray-900">Atlas Os</h3>
-            </a>
-
-            <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              It is a Website that can do some basic operation of smart phones.
-            </p>
-
-            <a
-              href="https://atlas-os.vercel.app/"
-              className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Check it out
-              <span
-                aria-hidden="true"
-                className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-              >
-                &rarr;
-              </span>
-            </a>
-          </div>
-        </motion.article>
-        <motion.article
-          className="overflow-hidden m-3 rounded-lg border border-gray-100 bg-white shadow-sm"
+          <>
+            <figure className="">
+              <img
+                src={atlas}
+                alt="Shoes"
+                className="rounded-xl h-36 w-full object-cover"
+              />
+            </figure>
+            <div className=" items-center text-center">
+              <h2 className="text-xl font-bold text-white text-start m-1">
+                Atlas OS
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="grid grid-cols-2">
+                <Link
+                  to={"https://atlas-os.vercel.app/"}
+                  className="bg-blue rounded-xl px-2 text-black py-1 m-1"
+                >
+                  Visit
+                </Link>
+                <div className="dropdown dropdown-hover">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="bg-blue rounded-xl px-2 text-black py-1 m-1"
+                  >
+                    Details
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue"
+                  >
+                    <li>
+                      <h1>Item 1</h1>
+                    </li>
+                    <li>
+                      <h1>Item 2</h1>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </>
+        </motion.div>
+        <motion.div
+          className="card bg-base-100 shadow-xl"
           initial={{ x: -100 }}
           whileInView={{ x: 0 }}
-          transition={{ duration: 0.6, ease: easeInOut }}
+          whileHover={{
+            scale: 1.05,
+            zIndex: 100,
+            boxShadow: "0 7px 10px rgba(31, 207, 231, 0.414)",
+          }}
+          transition={{
+            duration: 0.3,
+            stiffness: 400,
+            damping: 10,
+          }}
         >
-          <img alt="" src={thegallery} className="h-56 w-full object-cover" />
-
-          <div className="p-4 sm:p-6">
-            <a href="/">
-              <h3 className="text-lg font-medium text-gray-900">The Gallery</h3>
-            </a>
-
-            <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              It is a Website that can store the images for you.
-            </p>
-
-            <a
-              href="https://the-gallery-frontend.vercel.app/"
-              className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Check it out
-              <span
-                aria-hidden="true"
-                className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-              >
-                &rarr;
-              </span>
-            </a>
-          </div>
-        </motion.article>
+          <>
+            <figure className="">
+              <img
+                src={thegallery}
+                alt="Shoes"
+                className="rounded-xl h-36 w-full object-cover"
+              />
+            </figure>
+            <div className=" items-center text-center">
+              <h2 className="text-xl font-bold text-white text-start m-1">
+                The Gallery
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="grid grid-cols-2">
+                <Link
+                  to={"https://the-gallery-frontend.vercel.app/"}
+                  className="bg-blue rounded-xl px-2 text-black py-1 m-1"
+                >
+                  Visit
+                </Link>
+                <div className="dropdown dropdown-hover">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="bg-blue rounded-xl px-2 text-black py-1 m-1"
+                  >
+                    Details
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-gray-500 shadow border-t-2 border-l-2 border-blue"
+                  >
+                    <li>
+                      <h1>Item 1</h1>
+                    </li>
+                    <li>
+                      <h1>Item 2</h1>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </>
+        </motion.div>
       </div>
     </div>
   );

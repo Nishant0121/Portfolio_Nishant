@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -101,6 +102,12 @@ export const Contact = () => {
           </button>
         </div>
       </form>
+      <Link
+        to="/"
+        className=" bg-blu hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Home
+      </Link>
     </div>
   );
 };
